@@ -2,11 +2,11 @@
 Project for the course Computer Systems and Architecture, first bachelor at the University of Antwerp.
 
 # Details
-The game is completely writting in the MIPS-assembly language and tested with the Mars software. New levels can be created by simply constructing it in a \*.txt file and using the following characters:
-**WALL : w
-PASSAGE : p
-PLAYER : s (can only be one of)
-EXIT : u
+The game is completely writting in the MIPS-assembly language and tested with the Mars software. New levels can be created by simply constructing it in a \*.txt file and using the following characters:<br/> <br/>
+**WALL : w <br/>
+PASSAGE : p <br/>
+PLAYER : s <br/>
+EXIT : u <br/>
 CANDY : c**
 
 # Display
