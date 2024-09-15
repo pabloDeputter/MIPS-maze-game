@@ -3,6 +3,8 @@
 ## Overview
 This project implements a maze-based game in MIPS Assembly. Inspired by Pac-Man, the user starts inside a maze and must find the exit. The game supports both manual navigation and an automated solution using a recursive Depth-First Search (DFS) algorithm. The project is designed to test various computer architecture principles and to enhance your skills in assembly language.
 
+**Created for the "Computer Systems & Architecture" 1st bachelor course at the University of Antwerp.**
+
 ## Key Features
 - **Manual Maze Navigation**: Move through the maze using the keyboard.
 - **Automatic Maze Solver**: The game includes a feature where the program automatically finds the exit using the DFS algorithm.
