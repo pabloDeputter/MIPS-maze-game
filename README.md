@@ -1,16 +1,37 @@
-# mips-maze-game
-Project for the course Computer Systems and Architecture, first bachelor at the University of Antwerp.
+# MIPS Maze Game
 
-# Details
-The game is completely writting in the MIPS-assembly language and tested with the Mars software. New levels can be created by simply constructing it in a \*.txt file and using the following characters:<br/> <br/>
-**WALL : w <br/>
-PASSAGE : p <br/>
-PLAYER : s <br/>
-EXIT : u <br/>
-CANDY : c**
+## Overview
+This project implements a maze-based game in MIPS Assembly. Inspired by Pac-Man, the user starts inside a maze and must find the exit. The game supports both manual navigation and an automated solution using a recursive Depth-First Search (DFS) algorithm. The project is designed to test various computer architecture principles and to enhance your skills in assembly language.
 
-# Display
-The **bitmap display tool** of Mars can be used to display the maze. The display-width and display-height for one pixel must be set to ```16px``` each. The dimensions of the bitmap display must be set to ```512 x 512```. The base address of the display is the global stack-pointer or the register ```$gp```.
+## Key Features
+- **Manual Maze Navigation**: Move through the maze using the keyboard.
+- **Automatic Maze Solver**: The game includes a feature where the program automatically finds the exit using the DFS algorithm.
+- **Stack Frame Usage**: Functions are implemented using simplified stack frames compared to those covered in class. All arguments and return values are passed through registers.
+- **Dynamic Maze Dimensions**: The maze format is not fixed, and the program dynamically determines the dimensions while reading the maze from a file.
 
-# Keyboard Inputs
-For keyboard inputs we use the **Keyboard and Display MMIO Simulator tool**.
+## Requirements
+- **MARS Simulator**: Use the provided [MARS4.5](#) simulator to run the project.
+- **Bitmap Display Settings**:
+  - Unit Width: 16
+  - Unit Height: 16
+  - Display Width: 512
+  - Display Height: 256
+  - Base Address: 0x10008000 (`$gp`)
+
+## Files in the Project
+- `project_basis.asm`: Contains the basic functionality where the player manually navigates through the maze.
+- `input_large.txt`: The maze input file used for testing.
+- `input_small.txt`: Smaller maze input file.
+- **MIPS Exercises**:
+  - Several `.asm` files to build foundational MIPS skills, such as reading keyboard input, handling bitmap displays, and file I/O.
+
+## Running the Project
+1. **Run the Game**:
+   - Open `project_basis.asm` in MARS.
+   - Adjust the path of the maze file.
+   - Use the keyboard to navigate the player:
+     - `z`: Move up
+     - `s`: Move down
+     - `q`: Move left
+     - `d`: Move right
+   - The game ends when the player reaches the exit.
